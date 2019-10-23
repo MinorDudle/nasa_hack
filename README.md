@@ -2,23 +2,30 @@
 
 # Using the app:
 
-## Change working directory to backend_server:
+## Make sure you have docker installed.
 
-- ```cd backend_server```
+## Change working directory to app:
 
-## Start local web server (run it in the background or on a separate terminal):
+- ```cd app```
 
-- ```python -m http.server```
+## Build a docker image (we will tag it as "sajans/exoselfie" for this example), run:
 
-You might see something like this:
-<img src="https://i.imgur.com/Z1Fs2CF.png"  />
+Note: it will take a minute or two to install all dependencies (final image is around 1.5 GB in size).
 
-## Start Flask web server (run it in the background or on a separate terminal):
+- ```docker build . -t sajans/exoselfie```
 
-- ```python app.py```
+Final output should look like this:
+<img src="https://i.imgur.com/NcXupMP.png"  />
 
-You might see something like this:
-<img src="https://i.imgur.com/iEtY2Kj.png"  />
+## Run docker image:
+
+Note: in order for the app to work, port forwarding has to be done in the exact same way as in the example:
+
+Run in the background:
+- ```docker run -d -p 8000:8000 -p 5000:5000 sajans/exoselfie```
+
+Run in attached mode:
+- ```docker run -p 8000:8000 -p 5000:5000 sajans/exoselfie```
 
 ## You are ready to access your app on http://127.0.0.1:5000/ :
 
