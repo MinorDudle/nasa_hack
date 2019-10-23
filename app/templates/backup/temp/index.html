@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>EXOSELFIE - Build a planet to live!</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="vendor/bootstrap/css/bootstrap-slider.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="css/small-business.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <!-- Navigation -->
+
+  <!-- Home page Content -->
+<div class="container">
+<head>
+<title>NASA</title>
+
+<!-- CSS -->
+<style type="text/css">
+html,
+body {
+height: 100%
+weight: 100%;
+}
+body {
+background-image: url(images/astronaut.jpg);
+background-repeat: no-repeat;
+background-size: 100% 100%;
+}
+</style>
+
+<!-- HTML -->
+<img src="images/exoselfie_logo.JPG" height="180" width="240" align="left">
+
+
+    <!-- Heading Row -->
+    <body>
+        <div class="row align-items-center my-5">
+        <div class="col-lg-7">
+        <!-- <img class="img-fluid rounded mb-4 mb-lg-0" src="https://www.nasa.gov/sites/default/files/thumbnails/image/space-apps-challenge2.jpg" alt=""> -->
+        </div>
+      <div class="row align-items-center my-5">
+      </div>
+      <div class="col-lg-5 bg-white">
+        <h1 class="font-weight-light">Build your exoplanet!</h1>
+        <p> EXOSELFIE is an educational game for everyone who wants to learn more about planets’ structure, star-planets systems and habitable zone features. It is creative game that makes a great use of the NASA data.
+          Embrace yourself and take a selfie to see how will you look in your newly built exoplanet!
+        Are you ready to build your planet? </p>
+        <!-- <a class="btn btn-primary" href="#">Upload Selfie!</a> -->
+
+      </div>
+      <!-- /.col-md-4
+      <form method="post" action="http://127.0.0.1:5000/upload-image" enctype="multipart/form-data">
+      <div>
+        <div class="row align-items-center">
+      	<input type="file" class="form-control-file" id="planetFormControlFile1" name="media">
+      </div>
+      <div class="row align-items-center">
+      	<div class="form-group">
+      		<input type="Submit" value="Submit"/>
+   		</div>
+   	   </div>
+   	   </form>
+    </div> -->
+    <!-- /.row -->
+  </div>
+
+
+  <section id="projects" class="projects-section bg-light">
+    <div class="container">
+      	<form method="post" action="http://127.0.0.1:5000/upload-image" enctype="multipart/form-data">
+            <div class="row">
+        <div class="col">
+          <div class="form-group text-center">
+            <label> <b>Planetary Parameters</b> </label>
+          </div>
+          <div class="form-group">
+            <label> Planet Mass (Earth mass)	</label>
+            <span class="font-weight-bold indigo-text mr-2 mt-1">0.5</span>
+            <input id="ex1" name="M_exo" data-slider-id='ex1Slider' type="text" data-slider-min="0.5" data-slider-max="9000" data-slider-step="1" data-slider-value="1"/>
+            <span class="font-weight-bold indigo-text ml-2 mt-1">9000</span>
+          </div>
+
+          <div class="form-group">
+            <label>Planet Radius (Earth radii)</label>
+            <span class="font-weight-bold indigo-text mr-2 mt-1">0.5</span>
+            <input id="ex2" name="R_exo" data-slider-id='ex2Slider' type="text" data-slider-min="0.5" data-slider-max="25" data-slider-step="1" data-slider-value="1"/>
+            <span class="font-weight-bold indigo-text ml-2 mt-1">25</span>
+          </div>
+          <div class="form-group">
+            <label>Distance from the star (AU)</label>
+            <span class="font-weight-bold indigo-text mr-2 mt-1">0.01</span>
+            <input id="ex3" name="a" data-slider-id='ex3Slider' type="text" data-slider-min="0.01" data-slider-max="5" data-slider-step="0.01" data-slider-value="1"/>
+            <span class="font-weight-bold indigo-text ml-2 mt-1">5</span>
+          </div>
+        </div>
+        <div class="col">
+          <div class="form-group text-center">
+                <label><b>Stellar Parameters</b></label>
+            </div>
+      	  <div class="form-group">
+        	<label>Effective Temperature (K)</label>
+              <span class="font-weight-bold indigo-text mr-2 mt-1">2500</span>
+              <input id="ex4" name="T_star" data-slider-id='ex4Slider' type="text" data-slider-min="2500" data-slider-max="10000" data-slider-step="50" data-slider-value="5700"/>
+              <span class="font-weight-bold indigo-text ml-2 mt-1">20000</span>
+          </div>
+          <div class="form-group">
+            <label>Stellar Radius (solar radii)</label>
+              <span class="font-weight-bold indigo-text mr-2 mt-1">0</span>
+              <input id="ex5" name="R" data-slider-id='ex5Slider' type="text" data-slider-min="0.01" data-slider-max="20" data-slider-step="1" data-slider-value="1"/>
+              <span class="font-weight-bold indigo-text ml-2 mt-1">100</span>
+            </div>
+              <input type="file" class="form-control-file" id="planetFormControlFile1" name="media">
+              <input type="submit" value="Submit"/>
+       </div>
+     </div>
+    </div>
+  </section>
+
+ <!-- Information Section -->
+ <section id="info" class="info-section bg-light">
+    <div class="container">
+    <!-- Content Row -->
+    <div class="row">
+      <div class="col-md-4 mb-5">
+        <div class="card h-100">
+          <div class="card-body">
+            <h2 class="card-title">Description</h2>
+            <p class="card-text">
+                Dear exoplanet builder,
+
+                Your mission is to build a planet for all of us to live in.
+
+                You will have to be wise and careful when selecting parameters for a star and a planet you are about to compose.
+
+                Your goal is to survive and understand how to create a world hospitable to life. Maybe it will become our new holiday destination?!
+
+                However, there are over 100 Billion planets in our Galaxy called Milky-Way, 4 000 were confirmed as exoplanets but only nearly 50 are in the habitable zone.
+
+                Embrace yourself and take a selfie to see what you would  look like in your newly built exoplanet!
+                </p>
+          </div>
+          <div class="card-footer">
+           <!-- <a href="#" class="btn btn-primary btn-sm">More Info</a> -->
+          </div>
+        </div>
+      </div>
+      <!-- /.col-md-4 -->
+      <div class="col-md-4 mb-5">
+        <div class="card h-100">
+          <div class="card-body">
+            <h2 class="card-title">Look at you</h2>
+            <img src="http://localhost:8000/templates/result/Result.jpg" height="340" width="300" align="left">
+          </div>
+          <div class="card-footer">
+          </div>
+        </div>
+      </div>
+      <!-- /.col-md-4 -->
+      <div class="col-md-4 mb-5">
+        <div class="card h-100">
+          <div class="card-body">
+            <h2 class="card-title">Results</h2>
+            <p class="card-text"> Your survival score: </p>
+            <p class="card-text"> Survival status: </p>
+            <p class="card-text"> Temperature on your planet: </p>
+            <p class="card-text"> Surface gravity on your plannet: </p>
+            <p class="card-text"> Similar exoplanet discovered by NASA: </p>
+          </div>
+          <div class="card-footer">
+          </div>
+        </div>
+      </div>
+      <!-- /.col-md-4 -->
+
+    </div>
+    <!-- /.row -->
+  </section>
+
+  	<!-- /.container -->
+  <!-- /.information -->
+
+  <!-- Footer -->
+  <footer class="py-5 bg-dark">
+    <div class="container">
+      <p class="m-0 text-center text-white">Copyright &copy; SAJANS 2019</p>
+    </div>
+    <!-- /.container -->
+  </footer>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap-slider.min.js"></script>
+  <script>
+    // With JQuery Sliders
+    $('#ex1').slider({
+      formatter: function(value) {
+        return 'Current value: ' + value;
+      }
+    });
+    $('#ex2').slider({
+      formatter: function(value) {
+        return 'Current value: ' + value;
+      }
+    });
+    $('#ex3').slider({
+      formatter: function(value) {
+        return 'Current value: ' + value;
+      }
+    });
+    $('#ex4').slider({
+      formatter: function(value) {
+        return 'Current value: ' + value;
+      }
+    });
+    $('#ex5').slider({
+      formatter: function(value) {
+        return 'Current value: ' + value;
+      }
+    });
+  </script>
+</body>
+
+</html>

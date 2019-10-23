@@ -3,6 +3,7 @@ from utils.transformer import FullTransformation, WeightedTransformation
 from utils.planet import Planet
 from utils.cleanup import perform_cleanup
 from utils import hack_index as hack
+import random
 
 from flask import Flask, request, jsonify, render_template, redirect
 
@@ -70,8 +71,10 @@ def upload_image():
         weighted_rgb_image = np.einsum('ijk,k->ijk', weighted_image, planet_object.RGB)
         weighted_rgb_image = np.asarray(weighted_rgb_image, dtype=int)
         cv.imwrite(f"{app_config.weigted_transformation_path}/{image.filename}", weighted_rgb_image)
-        cv.imwrite("templates/result/Result.jpg", weighted_rgb_image)
-        hack.hack_index(hack.returnText(planet_object.surviveTotal, planet_object.T_star))
+        image_name = f"Result_{random.randint(0, 999999999)}.jpg"
+        image_path = f"templates/result/{image_name}"
+        cv.imwrite(image_path, weighted_rgb_image)
+        hack.hack_index(hack.returnText(planet_object.surviveTotal, planet_object.T_star), image_name)
         return redirect("http://localhost:8000/templates/")
         #return jsonify({"status": "successful upload"})
         #return f"{planet_object.RGB}"
@@ -80,7 +83,7 @@ def upload_image():
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    # app.run(debug=True)
     # For public web serving:
-    # app.run(host='0.0.0.0')
+    app.run(host='0.0.0.0')
     #app.run()

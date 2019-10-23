@@ -4,8 +4,6 @@ import numpy as np
 import openpyxl
 import pandas as pd
 from scipy.optimize import curve_fit
-import matplotlib.pyplot as plt
-from mpl_toolkits.axes_grid1.axes_rgb import RGBAxes
 import cv2
 import codecs
 import os, shutil
@@ -430,7 +428,7 @@ def returnText(cfg, T_star):
     return (text)
 
 
-def hack_index(text_replacement):
+def hack_index(text_replacement, image_name):
     with codecs.open("templates/backup/index.html") as file:
         text = file.read()
 
@@ -440,6 +438,8 @@ def hack_index(text_replacement):
             <p class="card-text"> Surface gravity on your plannet: </p>
             <p class="card-text"> Similar exoplanet discovered by NASA: </p>""",
                                  f"""<p class="card-text"> {text_replacement} </p>""")
+
+    replaced_text = replaced_text.replace("Result.jpg", image_name)
 
     with open("templates/backup/temp/index.html", "w") as file:
         file.write(replaced_text)

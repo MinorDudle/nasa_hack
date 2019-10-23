@@ -17,7 +17,7 @@ def post_image(data, data2):
 
 if __name__ == "__main__":
 
-    #post_request({'first_field': "", 'second_field': ""})
+    post_request({'first_field': "", 'second_field': ""})
 
-    post_image({'media': open("/Users/agriciunas/Desktop/NASA_HACKATON_DEV/pictures/person_1.jpg", "rb")},
-               {"T_star": 5400, "R": 2, "a": 2.5, "M_exo":1, "R_exo":1})
+    # post_image({'media': open("/Users/agriciunas/Desktop/NASA_HACKATON_DEV/pictures/Karolina.jpg", "rb")},
+    #            {"T_star": 5400, "R": 2, "a": 2.5, "M_exo":1, "R_exo":1})
