@@ -15,6 +15,7 @@ Note: it will take a minute or two to install all dependencies (final image is a
 - ```docker build . -t sajans/exoselfie```
 
 Final output should look like this:
+
 <img src="https://i.imgur.com/NcXupMP.png"  width="400" height="180" />
 
 ## Run docker image:
