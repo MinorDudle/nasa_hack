@@ -27,6 +27,8 @@ Note: in order for the app to work, port forwarding has to be done in the exact 
 Run in the background:
 - ```docker run -d -p 8000:8000 -p 5000:5000 sajans/exoselfie```
 
+## OR
+
 Run in attached mode:
 - ```docker run -p 8000:8000 -p 5000:5000 sajans/exoselfie```
 
