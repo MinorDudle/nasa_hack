@@ -36,3 +36,26 @@ Run in attached mode:
 
 <img src="https://i.imgur.com/wKXaBLE.jpg"  />
 
+## Remember to clean up your environment after you finish playing with the app.
+
+- run:
+
+```docker container list```
+
+- find your container and its ID:
+
+<img src="https://i.imgur.com/tWiie7A.png"  width="1200" height="27" />
+
+- stop and delete the container, run:
+
+```docker stop <Enter container ID here>```
+
+```docker rm <Enter container ID here>```
+
+- remove docker image the we've built, run:
+
+```docker rmi sajans/exoselfie```
+
+- only if you are not using tensorflow/tensorflow base image for other projects remove it also:
+
+```docker rmi tensorflow/tensorflow:latest-py3```
