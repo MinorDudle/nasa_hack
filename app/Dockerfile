@@ -12,8 +12,8 @@ RUN apt-get update \
 
 USER root
 
-COPY . .
+COPY . ./app
 
-WORKDIR .
+WORKDIR /app
 
-CMD ["supervisord", "-c", "/supervisord.conf"]
+CMD ["supervisord", "-c", "./supervisord.conf"]
