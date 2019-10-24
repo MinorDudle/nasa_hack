@@ -4,6 +4,8 @@
 
 ## Make sure you have docker installed.
 
+Look for instructions here: https://docs.docker.com/install/
+
 ## Change working directory to app:
 
 - ```cd app```
