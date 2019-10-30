@@ -2,15 +2,21 @@
 
 # Using the app:
 
-## Make sure you have docker installed.
+## You can find the app hosted here:
+
+https://www.exoselfie.com
+
+## Or you can build the app locally by following these steps:
+
+### Make sure you have docker installed.
 
 Look for instructions here: https://docs.docker.com/install/
 
-## Change working directory to app:
+### Change working directory to app:
 
 - ```cd app```
 
-## Build a docker image (we will tag it as "sajans/exoselfie" for this example), run:
+### Build a docker image (we will tag it as "sajans/exoselfie" for this example), run:
 
 Note: it will take a minute or two to install all dependencies (final image is around 1.5 GB in size).
 
@@ -20,27 +26,27 @@ Final output should look like this:
 
 <img src="https://i.imgur.com/kuMFM6F.png"  width="400" height="190" />
 
-## Run docker image:
+### Run docker image:
 
 Note: in order for the app to work, port forwarding has to be done in the exact same way as in the example:
 
 Run in the background:
 - ```docker run -d -p 8000:8000 -p 5000:5000 sajans/exoselfie```
 
-## OR
+### OR
 
 Run in attached mode:
 - ```docker run -p 8000:8000 -p 5000:5000 sajans/exoselfie```
 
-## You are ready to access your app on http://127.0.0.1:5000/ :
+### You are ready to access your app on http://127.0.0.1:5000/ :
 
 <img src="https://i.imgur.com/Z9wAToG.jpg"  />
 
-## Upload your photo and have fun!
+### Upload your photo and have fun!
 
 <img src="https://i.imgur.com/wKXaBLE.jpg"  />
 
-## Remember to clean up your environment after you finish playing with the app.
+### Remember to clean up your environment after you finish playing with the app.
 
 - run:
 
